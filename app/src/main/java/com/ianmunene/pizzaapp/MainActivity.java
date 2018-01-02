@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_create_order:
                 Intent intent = new Intent(MainActivity.this, OrderActivity.class);
                 startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 }
